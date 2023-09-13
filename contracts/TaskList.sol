@@ -8,5 +8,6 @@ contract TaskList {
         uint id;
         string content;
         bool completed;
-}
+    }
+    mapping(uint => Task) public tasks;
 }
