@@ -10,4 +10,13 @@ contract TaskList {
         bool completed;
     }
     mapping(uint => Task) public tasks;
+
+    constructor() public {
+        createTask("Task nº1");
+    }
+
+    function createTask(string memory _content) public {
+        taskCount++;
+        tasks[taskCount] = Task(taskCount, _content, false);
+    }
 }
